@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Hello World</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #10181f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .greeting {
+      font-size: clamp(3rem, 10vw, 8rem);
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+      animation: fadeIn 1.2s ease-out forwards;
+      opacity: 0;
+    }
+
+    .greeting span {
+      color: #00b7af;
+    }
+
+    .subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.75rem);
+      color: #6a7071;
+      margin-top: 1rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      animation: fadeIn 1.2s ease-out 0.4s forwards;
+      opacity: 0;
+    }
+
+    .accent-line {
+      width: 80px;
+      height: 4px;
+      background: #00b7af;
+      margin: 1.5rem auto 0;
+      border-radius: 2px;
+      animation: expandLine 0.8s ease-out 0.8s forwards;
+      transform: scaleX(0);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes expandLine {
+      from {
+        transform: scaleX(0);
+      }
+      to {
+        transform: scaleX(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="greeting">Hello, <span>World</span>!</h1>
+    <p class="subtitle">Welcome</p>
+    <div class="accent-line"></div>
+  </div>
+</body>
+</html>
